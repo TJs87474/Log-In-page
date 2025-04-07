@@ -12,6 +12,8 @@ android {
     namespace = "com.example.cw6"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
+    
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -27,7 +29,8 @@ android {
         applicationId = "com.example.cw6"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        
+        minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -45,3 +48,5 @@ android {
 flutter {
     source = "../.."
 }
+
+
