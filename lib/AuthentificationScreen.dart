@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'AuthService.dart';
-import 'HomeScreen.dart'; // Make sure this exists or create a simple placeholder screen
+import 'ProfileScreen.dart'; // Import ProfileScreen
 
 class AuthenticationScreen extends StatefulWidget {
   @override
@@ -51,9 +51,10 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           _passwordController.text,
         );
         if (user != null) {
+          // Navigate directly to ProfileScreen after successful sign-in
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
+            MaterialPageRoute(builder: (context) => ProfileScreen()), // Navigate to ProfileScreen
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
